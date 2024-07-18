@@ -8,9 +8,9 @@ import TeamCard from '../components/TeamCard';
 
 const teams = [
   { name: 'Houston', coach: 'Coleman', record: '0-0', passingYards: 3500, rushingYards: 1500, touchdowns: 40, interceptions: 10, image: '/img/UH.png' },
-  { name: 'Boise State', coach: 'Coach B', record: '1-0', passingYards: 3000, rushingYards: 1800, touchdowns: 35, interceptions: 8, image: '/img/boise state.png' },
-  { name: 'Fresno State', coach: 'Coach C', record: '0-0', passingYards: 3200, rushingYards: 1700, touchdowns: 38, interceptions: 9, image: '/img/bulldog.png' },
-  { name: 'Wake Forest', coach: 'Badculo', record: '1-0', passingYards: 3700, rushingYards: 1600, touchdowns: 42, interceptions: 7, image: '/img/wake_forest_demon_deacons-alternate.png' },
+  { name: 'Boise State', coach: 'Coach B', record: '1-0', passingYards: 3000, rushingYards: 1800, touchdowns: 35, interceptions: 8, image: '/img/bs.png' },
+  { name: 'Fresno State', coach: 'Coach C', record: '0-0', passingYards: 3200, rushingYards: 1700, touchdowns: 38, interceptions: 9, image: '/img/BULLDOG.png' },
+  { name: 'Wake Forest', coach: 'Badculo', record: '1-0', passingYards: 3700, rushingYards: 1600, touchdowns: 42, interceptions: 7, image: '/img/wf.png' },
   { name: 'Buffalo', coach: 'Coach E', record: '0-0', passingYards: 2900, rushingYards: 2000, touchdowns: 30, interceptions: 12, image: '/img/buffalo.webp' },
   { name: 'Rice', coach: 'Alscott', record: '0-1', passingYards: 2800, rushingYards: 2100, touchdowns: 28, interceptions: 15, image: '/img/rice.jpg' },
 ];
