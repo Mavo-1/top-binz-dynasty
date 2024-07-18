@@ -5,7 +5,7 @@ import { Box, Typography, Link } from '@mui/material';
 
 const Footer = () => {
   return (
-    <Box sx={{ bgcolor: 'primary.main', color: 'white', p: 6 }} component="footer">
+    <Box sx={{ bgcolor: 'primary.main', color: 'white', p: 1 }} component="footer">
       <Typography variant="h6" align="center" gutterBottom>
         College Football 25
       </Typography>

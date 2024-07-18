@@ -26,8 +26,8 @@ const TeamTable = ({ teams }) => {
             <TableCell>Record</TableCell>
             <TableCell>Passing Yards</TableCell>
             <TableCell>Rushing Yards</TableCell>
-            <TableCell>Touchdowns</TableCell>
-            <TableCell>Interceptions</TableCell>
+            <TableCell>Passing TD</TableCell>
+            <TableCell>Rushing TD</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -38,8 +38,8 @@ const TeamTable = ({ teams }) => {
               <TableCell>{team.record}</TableCell>
               <TableCell>{team.passingYards}</TableCell>
               <TableCell>{team.rushingYards}</TableCell>
-              <TableCell>{team.touchdowns}</TableCell>
-              <TableCell>{team.interceptions}</TableCell>
+              <TableCell>{team.ptd}</TableCell>
+              <TableCell>{team.rtd}</TableCell>
             </TableRow>
           ))}
         </TableBody>

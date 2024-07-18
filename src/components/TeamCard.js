@@ -14,13 +14,13 @@ const TeamCard = ({ team }) => {
         <Typography variant="subtitle1" color="textSecondary">
           Coach: {team.coach}
         </Typography>
-        <Divider sx={{ my: 2 }} />
+        <Divider sx={{ my: 1 }} />
         <Box>
           <Typography variant="body2">Record: {team.record}</Typography>
           <Typography variant="body2">Passing Yards: {team.passingYards}</Typography>
           <Typography variant="body2">Rushing Yards: {team.rushingYards}</Typography>
-          <Typography variant="body2">Touchdowns: {team.touchdowns}</Typography>
-          <Typography variant="body2">Interceptions: {team.interceptions}</Typography>
+          <Typography variant="body2">Passing TD: {team.ptd}</Typography>
+          <Typography variant="body2">Rushing TD: {team.rtd}</Typography>
         </Box>
       </CardContent>
     </Card>

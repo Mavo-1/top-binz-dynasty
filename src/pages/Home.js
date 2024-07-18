@@ -13,12 +13,17 @@ import ArticleGrid from '../components/ArticleGrid';
 const drawerWidth = 240;
 
 const teams = [
-  { name: 'Houston', coach: 'Coleman', record: '0-0', passingYards: 15, rushingYards: 1500, touchdowns: 40, interceptions: 10, image: '/img/UH.png' },
-  { name: 'Boise State', coach: 'Coach B', record: '1-0', passingYards: 3000, rushingYards: 1800, touchdowns: 35, interceptions: 8, image: '/img/bs.png' },
-  { name: 'Fresno State', coach: 'Coach C', record: '0-1', passingYards: 3200, rushingYards: 1700, touchdowns: 38, interceptions: 9, image: '/img/BULLDOG.png' },
-  { name: 'Wake Forest', coach: 'Badculo', record: '1-0', passingYards: 3700, rushingYards: 1600, touchdowns: 42, interceptions: 7, image: '/img/wf.png' },
-  { name: 'Buffalo', coach: 'Coach E', record: '1-0', passingYards: 2900, rushingYards: 2000, touchdowns: 30, interceptions: 12, image: '/img/buffalo.webp' },
-  { name: 'Rice', coach: 'Alstott', record: '0-1', passingYards: 2800, rushingYards: 2100, touchdowns: 28, interceptions: 15, image: '/img/rice.jpg' },
+  { name: 'Houston', coach: 'Coleman', record: '0-1', passingYards: 374, rushingYards: 12, ptd: 2, rtd: 1, image: '/img/UH.png' },
+
+  { name: 'Boise State', coach: 'Lasso', record: '1-1', passingYards: 415, rushingYards: 479, ptd: 3, rtd: 6, image: '/img/bs.png' },
+
+  { name: 'Fresno State', coach: 'Freeman', record: '2-1', passingYards: 863, rushingYards: 432, ptd: 10, rtd: 3, image: '/img/BULLDOG.png' },
+
+  { name: 'Wake Forest', coach: 'Falco', record: '3-0', passingYards: 806, rushingYards: 630, ptd: 7, rtd: 7, image: '/img/wf.png' },
+
+  { name: 'Buffalo', coach: 'Options', record: '1-2', passingYards: 1096, rushingYards: 246, ptd: 7, rtd: 4, image: '/img/buffalo.webp' },
+
+  { name: 'Rice', coach: 'Alstott', record: '1-1', passingYards: 240, rushingYards: 527, ptd: 3, rtd: 7, image: '/img/rice.jpg' },
 ];
 
 const articles = [
@@ -33,7 +38,7 @@ const articles = [
 
 const Home = () => {
     return (
-        <Box sx={{ display: 'flex', minHeight: '100vh', flexDirection: 'column' }}>
+        <Box sx={{ display: 'flex', minHeight: '100vh', flexDirection: 'column', bgcolor: 'grey.400' }}>
         <CssBaseline />
         <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
           <Toolbar>
@@ -45,35 +50,48 @@ const Home = () => {
         <Drawer
           variant="permanent"
           sx={{
+            
             width: drawerWidth,
             flexShrink: 0,
-            [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },
+            [`& .MuiDrawer-paper`]: 
+            { width: drawerWidth, 
+                boxSizing: 'border-box', 
+                bgcolor: "grey.400",
+                color: 'white' },
           }}
         >
           <Toolbar />
           <Divider />
-          <List>
-            <ListItem button component="a" href="#home">
-              <ListItemIcon>
-                <HomeIcon />
+          <List sx={{
+            color:'white'
+          }}>
+            <ListItem button component="a" href="#home" >
+              <ListItemIcon sx={{
+            color:'white'
+          }}>
+                <HomeIcon  />
               </ListItemIcon>
               <ListItemText primary="Home" />
             </ListItem>
             <ListItem button component="a" href="#team-table">
-              <ListItemIcon>
+              <ListItemIcon sx={{
+            color:'white'
+          }}>
                 <TableChartIcon />
               </ListItemIcon>
               <ListItemText primary="Team Rankings" />
             </ListItem>
             <ListItem button component="a" href="#articles">
-              <ListItemIcon>
+              <ListItemIcon sx={{
+            color:'white'
+          }}>
                 <ArticleIcon />
               </ListItemIcon>
               <ListItemText primary="Articles" />
             </ListItem>
           </List>
         </Drawer>
-        <Box component="main" sx={{ flexGrow: 1, bgcolor: 'grey.100', p: 3, marginLeft: `${drawerWidth}px` }}>
+        <Box component="main" sx={{ flexGrow: 1, bgcolor: 'grey.300', p: 3, marginLeft: `${drawerWidth}px` }}>
           <Toolbar />
           <Box
             id="home"
@@ -103,14 +121,14 @@ const Home = () => {
                 >
                   College Football League
                 </Typography>
-                <Typography
+                {/* <Typography
                   variant="h5"
                   align="center"
                   color="inherit"
                   paragraph
                 >
                   Stay updated with the latest news, team stats, and weekly articles.
-                </Typography>
+                </Typography> */}
                 </Box>
             </Container>
           </Box>
